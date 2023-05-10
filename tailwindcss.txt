@@ -1,3 +1,5 @@
+## Tailwind CSS - CLI
+
 npm init -y
 npm i -D tailwindcss
 npx tailwindcss init
@@ -12,7 +14,8 @@ module.exports = {
   plugins: [],
 }
 
-src/input.css
+# src/input.css
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,4 +27,24 @@ src/input.css
 
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
-npm run build
+# package.json
+
+"scripts": {
+    "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+
+npm run watch
+
+## Tailwind postCSS 
+
+npm init -y
+npm install -D tailwindcss postcss autoprefixer vite
+npx tailwindcss init -p
+
+# package.json
+
+"scripts": {
+    "start": "vite"
+  },
+
+npm run start
